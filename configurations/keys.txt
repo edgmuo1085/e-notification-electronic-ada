@@ -1,0 +1,3 @@
+keyStorePassword: eNotifyE
+alias: enotifyel
+password: eNotifyE
