@@ -54,6 +54,7 @@ yarn-error.log
 
 
 # Miscellaneous
+/.svn
 /.angular
 /.angular/cache
 .sass-cache/
