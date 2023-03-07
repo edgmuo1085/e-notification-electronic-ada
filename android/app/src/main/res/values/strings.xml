@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">eNotifyElectronic</string>
+    <string name="title_activity_main">eNotifyElectronic</string>
+    <string name="package_name">ada.notify.electronic</string>
+    <string name="custom_url_scheme">ada.notify.electronic</string>
+</resources>
