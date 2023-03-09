@@ -24,3 +24,26 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+$colors: (
+    primary: #051c3e,
+    secondary: #00aabf,
+    background: #e5e5e5,
+    text: #a2a9af,
+    icon: #c8cdd3
+);
+
+ion-content {
+    --background: none;
+    background-image: url('/assets/images/backLogin.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: map-get($colors, primary);
+}
+
+.list-inputs {
+    border-radius: 0.5rem;
+    --background: none;
+}

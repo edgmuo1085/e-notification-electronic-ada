@@ -1,0 +1,64 @@
+<ion-content class="ion-no-padding">
+  <ion-grid class="ion-padding">
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="10">
+        <ion-img src="./assets/images/logo.png"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="12" class="ion-text-center">
+        <ion-text color="light">
+          <h1>Iniciar Sesión</h1>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <form [formGroup]="formLogin" (ngSubmit)="login()">
+    <ion-grid class="ion-padding">
+      <ion-row>
+        <ion-col size="12">
+          <ion-list class="list-inputs">
+            <ion-item>
+              <ion-label> <ion-icon name="person"></ion-icon> Email </ion-label>
+              <ion-input formControlName="emailCtrl" type="text"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="ctrlForm['emailCtrl'].errors && ctrlForm['emailCtrl'].dirty">
+              <p *ngIf="ctrlForm['emailCtrl'].errors['required']">Requerido</p>
+              <p *ngIf="ctrlForm['emailCtrl'].errors['pattern']">Inválida</p>
+            </ion-item>
+
+            <ion-item>
+              <ion-label> <ion-icon name="lock-closed"></ion-icon> Contraseña </ion-label>
+              <ion-input formControlName="passwordCtrl" type="password"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="ctrlForm['passwordCtrl'].errors && ctrlForm['passwordCtrl'].dirty">
+              <p *ngIf="ctrlForm['passwordCtrl'].hasError('required')">Requerido</p>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <br />
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="submit" expand="block" shape="round" [disabled]="formLogin.invalid"> Ingresar </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="button" expand="block" shape="round" (click)="registro()"> Registro </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="12">
+          <ion-button type="button" expand="block" shape="round" (click)="solicitudCambioContrasena()">
+            Solicitar Cambio de Contraseña
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>
